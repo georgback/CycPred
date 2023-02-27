@@ -1,7 +1,7 @@
 # CycPred
 Tensorflow model for the prediction of cyclizability of provided DNA sequences of length 50
 
-usage
+Usage:
 
 CycPred inputfile outputfile
 
