@@ -5,9 +5,9 @@ Usage:
 
 python CycPred.py inputfile outputfile
 
-Inputfile must be sequences of length 50 bp, seperated by newlines
++ Inputfile must be sequences of length 50 bp, seperated by newlines
 
-Outputfile is a text file with newline seperated predicted cyclizability values for each sequence
++ Outputfile is a text file with newline seperated predicted cyclizability values for each sequence
 
 optional arguments
 
