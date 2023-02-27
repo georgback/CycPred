@@ -3,7 +3,7 @@ Tensorflow model for the prediction of cyclizability of provided DNA sequences o
 
 Usage:
 
-CycPred inputfile outputfile
+python CycPred.py inputfile outputfile
 
 Inputfile must be sequences of length 50 bp, seperated by newlines
 
@@ -21,7 +21,7 @@ Tensorflow version 2.6.0
 
 installation guide:
 
-1. install conda (miniconda is adviced)
+1. install conda (miniconda is advised)
 2. create new environment either using the command
 
       conda create -n my_env tensorflow=2.6.0 scikit-learn python>3.9
