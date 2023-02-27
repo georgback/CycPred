@@ -27,7 +27,7 @@ else:
 
 
 
-#preprocessing of     
+#preprocessing of sequences     
 alphabet={"A":1,"G":2,"T":3,"C":4}
 import sklearn.preprocessing as pre
 
@@ -49,12 +49,12 @@ one_hot=np.array(pool.map(one_hot_encode,seqs))
 
 
 
-#fwd and reverse prediction +returning the mean
+#fwd and reverse prediction + returning the mean
 def pred_with_comp(model,array,batch_size=512,complement=[2,3,0,1]):
     pred=model.predict(sequence.pad_sequences(array,50),batch_size=batch_size).reshape(len(array))
     rev_pred=model.predict(sequence.pad_sequences(array[:,:,complement][:,::-1]),batch_size=batch_size).reshape(len(array))
     return((pred+rev_pred)/2)
-
+#prediction
 model=tf.keras.models.load_model(os.path.join(sys.path[0],"CycPred"),compile=False)
 
 preds=pred_with_comp(model,one_hot)
