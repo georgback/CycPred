@@ -11,8 +11,8 @@ Outputfile is a text file with newline seperated predicted cyclizability values 
 
 optional arguments
 
-+--numpy : stores result in npy binary file instead of textfile
-+-n --threads : give number of threads. Default is all available threads
++ --numpy : stores result in npy binary file instead of textfile
++ -n --threads : give number of threads. Default is all available threads
 
 
 
@@ -29,5 +29,5 @@ installation guide:
       
       or
             
-      -*conda env create -f CycPred.yml
+      * conda env create -f CycPred.yml
 
