@@ -1,6 +1,19 @@
 # CycPred
 Tensorflow model for the prediction of cyclizability of provided DNA sequences of length 50
 
+usage
+
+CycPred inputfile outputfile
+
+Inputfile must be sequences of length 50 bp, seperated by newlines
+
+Outputfile is a text file with newline seperated predicted cyclizability values for each sequence
+
+optional arguments
+--numpy : stores result in npy binary file instead of textfile
+-n --threads : give number of threads. Default is all available threads
+
+
 
 required packages:
 python >=3.9
