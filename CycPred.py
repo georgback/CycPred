@@ -62,5 +62,5 @@ preds=pred_with_comp(model,one_hot)
 if args.numpy:
     np.save(args.output,preds)
 else:
-    np.savetxt(args.output+".txt",preds)
+    np.savetxt(args.output,preds)
 
