@@ -17,8 +17,8 @@ optional arguments
 
 
 required packages:
-python >=3.9
-Tensorflow version 2.6.0
++ python >=3.9
++ Tensorflow version 2.6.0
 
 installation guide:
 
