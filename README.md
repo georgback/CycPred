@@ -26,7 +26,7 @@ installation guide:
 
       - conda create -n my_env tensorflow=2.6.0 scikit-learn python>3.9
       
-      - or
+      or
             
       - conda env create -f CycPred.yml
 
