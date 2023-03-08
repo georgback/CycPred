@@ -5,7 +5,6 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.utils import to_categorical
 from keras.preprocessing import sequence
-#import multiprocessing
 import sys
 import os
 import argparse
@@ -40,7 +39,7 @@ seqs = np.array([np.array([alphabet.setdefault(y,0) for y in t]) for t in seqs])
 
 
 
-one_hot = to_categorical(seqs)
+seqs = to_categorical(seqs)
 
 
 #fwd and reverse prediction +returning the mean
@@ -51,10 +50,10 @@ def pred_with_comp(model,array,batch_size=512,complement=[2,3,0,1]):
 
 model=tf.keras.models.load_model(os.path.join(sys.path[0],"CycPred"),compile=False)
 
-preds=pred_with_comp(model,one_hot)
+predictions=pred_with_comp(model,seqs)
 
 if args.numpy:
-    np.save(args.output,preds)
+    np.save(args.output,predictions)
 else:
-    np.savetxt(args.output,preds)
+    np.savetxt(args.output,predictions)
 
