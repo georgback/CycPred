@@ -3,8 +3,9 @@
 
 import numpy as np
 import tensorflow as tf
+from tensorflow.keras.utils import to_categorical
 from keras.preprocessing import sequence
-import multiprocessing
+#import multiprocessing
 import sys
 import os
 import argparse
@@ -27,34 +28,27 @@ else:
 
 
 
-#preprocessing of sequences     
-alphabet={"A":1,"G":2,"T":3,"C":4}
-import sklearn.preprocessing as pre
+#preprocessing of seqences   
+alphabet={"A":0,"G":1,"T":2,"C":3}
 
-lbl= pre.OneHotEncoder(sparse=False,handle_unknown="ignore")
-lbl.fit(np.array([1,2,3,4]).reshape(4,1))
 
 seqs = np.array(open(args.input,'r').read().splitlines())
 
-seqs = np.array([[alphabet.setdefault(y,0) for y in t] for t in seqs])
-
-
-def one_hot_encode(x):
-    return lbl.transform(x.reshape(50,1))
-
-
-pool=multiprocessing.Pool(processes=n_jobs)
-one_hot=np.array(pool.map(one_hot_encode,seqs))
+#integer encoding
+#default replacement of unkown character with A
+seqs = np.array([np.array([alphabet.setdefault(y,0) for y in t]) for t in seqs])
 
 
 
+one_hot = to_categorical(seqs)
 
-#fwd and reverse prediction + returning the mean
+
+#fwd and reverse prediction +returning the mean
 def pred_with_comp(model,array,batch_size=512,complement=[2,3,0,1]):
     pred=model.predict(sequence.pad_sequences(array,50),batch_size=batch_size).reshape(len(array))
     rev_pred=model.predict(sequence.pad_sequences(array[:,:,complement][:,::-1]),batch_size=batch_size).reshape(len(array))
     return((pred+rev_pred)/2)
-#prediction
+
 model=tf.keras.models.load_model(os.path.join(sys.path[0],"CycPred"),compile=False)
 
 preds=pred_with_comp(model,one_hot)
