@@ -24,7 +24,10 @@ required packages:
 installation guide:
 
 1. install conda (miniconda is advised)
-2. create new environment either using the command
+2. configure conda (optional):
+      + conda config --add channels conda-forge
+      + conda config --set channel_priority strict
+3. create new environment either using the command
 
       + conda create -n my_env tensorflow=2.6.0 scikit-learn python>3.9
       
