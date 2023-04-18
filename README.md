@@ -35,3 +35,5 @@ installation guide:
             
       + conda env create -f CycPred.yml
 
+
+There is also a [colab notebook](https://colab.research.google.com/drive/1ng2dKkaZobSYHPWGgZKz4SFIS1peZfWh?usp=sharing) available.
