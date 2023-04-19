@@ -16,6 +16,8 @@ optional arguments
 + --numpy : stores result in npy binary file instead of textfile
 + -n --threads : give number of threads. Default is all available threads
 
+When execucted, the program performs cyclizability prediction on both the sequence and its reverse complement and reports the average value.
+
 ## Installation guide:
 
 
@@ -43,6 +45,13 @@ required packages:
      
      +  ``` conda create -n my_env tensorflow=2.6.0 scikit-learn python>3.9 ```
 
+
+To test the program we provide an example file, Yeast_chromosome_V.csv.
+
+Example execution
+```
+python CycPred.py Yeast_chromosome_V.csv result.txt
+```
 
 There is also a [colab notebook](https://colab.research.google.com/drive/1ng2dKkaZobSYHPWGgZKz4SFIS1peZfWh?usp=sharing) available.
 
