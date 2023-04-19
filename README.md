@@ -45,6 +45,8 @@ required packages:
 There is also a [colab notebook](https://colab.research.google.com/drive/1ng2dKkaZobSYHPWGgZKz4SFIS1peZfWh?usp=sharing) available.
 
 ## Architecture of the model:
+
+
 ![Architecture_more_info](https://user-images.githubusercontent.com/75431641/233105485-0bdf9e56-67f5-45ff-8b1b-612fe36d1cea.png)
 
 
