@@ -47,3 +47,4 @@ There is also a [colab notebook](https://colab.research.google.com/drive/1ng2dKk
 
 ![Architecture_more_info](https://user-images.githubusercontent.com/75431641/233105485-0bdf9e56-67f5-45ff-8b1b-612fe36d1cea.png)
 
+## Architecture of the model:
