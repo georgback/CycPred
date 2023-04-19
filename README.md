@@ -38,7 +38,7 @@ required packages:
       or
      
      
-       + conda create -n my_env tensorflow=2.6.0 scikit-learn python>3.9
+      + conda create -n my_env tensorflow=2.6.0 scikit-learn python>3.9
 
 
 There is also a [colab notebook](https://colab.research.google.com/drive/1ng2dKkaZobSYHPWGgZKz4SFIS1peZfWh?usp=sharing) available.
