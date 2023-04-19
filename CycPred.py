@@ -33,13 +33,19 @@ alphabet={"A":0,"G":1,"T":2,"C":3}
 
 seqs = np.array(open(args.input,'r').read().splitlines())
 
+if np.any(np.array([len(x) for x in seqs])!=50):
+    sys.exit("Not all sequences are of length 50. Execution was stopped.")
+
 #integer encoding
-#default replacement of unkown character with A
-seqs = np.array([np.array([alphabet.setdefault(y,0) for y in t]) for t in seqs])
+#replacement character of 99,
+seqs = np.array([np.array([alphabet.setdefault(y,99) for y in t.upper()]) for t in seqs])
+    
 
 
-
-seqs = to_categorical(seqs)
+try:
+    seqs = to_categorical(seqs,num_classes=4)
+except:
+    sys.exit("Encoding failed. Most likely reason is the occurrence of a character except A T G C ")
 
 
 #fwd and reverse prediction +returning the mean
