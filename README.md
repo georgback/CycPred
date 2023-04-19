@@ -7,7 +7,7 @@ Tensorflow model for the prediction of cyclizability of provided DNA sequences o
 python CycPred.py inputfile outputfile
 ```
 
-+ Inputfile must be DNA sequences consisting of only A,T,G or C of length 50 bp, seperated by newlines
++ Inputfile must be DNA sequences consisting of only A,T,G or C of length 50, seperated by newline
 
 + Outputfile is a text file with newline seperated predicted cyclizability values for each sequence
 
@@ -24,6 +24,8 @@ required packages:
 + Tensorflow version 2.6.0
 + scikit-learn
 
+
+0. ``` git clone https://github.com/georgback/CycPred ```
 1. install conda (miniconda is advised)
 2. configure conda (optional):
 
