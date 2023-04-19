@@ -63,3 +63,5 @@ if args.numpy:
 else:
     np.savetxt(args.output,predictions)
 
+print("Outputfile was written")
+
