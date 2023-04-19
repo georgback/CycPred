@@ -3,7 +3,9 @@ Tensorflow model for the prediction of cyclizability of provided DNA sequences o
 
 ## Usage:
 
-```python CycPred.py inputfile outputfile```
+```
+python CycPred.py inputfile outputfile
+```
 
 + Inputfile must be DNA sequences consisting of only A,T,G or C of length 50 bp, seperated by newlines
 
