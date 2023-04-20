@@ -43,7 +43,7 @@ required packages:
       or
      
      
-     +  ``` conda create -n my_env tensorflow=2.6.0 scikit-learn python>3.9 ```
+     +  ``` conda create -n my_env tensorflow=2.6.0 scikit-learn python=3.9 ```
 
 
 To test the program we provide an example file, Yeast_chromosome_V.csv.
