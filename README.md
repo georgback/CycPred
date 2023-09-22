@@ -68,6 +68,7 @@ We advise to install this package with conda, due to easier handeling of the evn
  
       +  ```
          conda create -n cycpred python=3.9 pip
+         conda activate cycpred
          ```
 3. Install package
    +  ``` pip install -e . ```
