@@ -59,7 +59,7 @@ python CycPred.py Yeast_chromosome_V.csv result.txt
 
 Guide to install cycpred as a package. We advise to do so in a virtual environment. 
 
-#with conda
+# With conda
 We advise to install this package with conda, due to easier handeling of the evnironment
 
 0. ``` git clone https://github.com/georgback/CycPred ```
@@ -72,7 +72,7 @@ We advise to install this package with conda, due to easier handeling of the evn
 3. Install package
    +  ``` pip install -e . ```
   
-#With pip
+# With pip
 This works if your current python version is 3.9 or lower.
 
 0. ``` git clone https://github.com/georgback/CycPred ```
