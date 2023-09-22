@@ -4,7 +4,7 @@ setup(
     name ="cycpred",
     packages = ["cycpred"],
     version = "1.0.0",
-    python_requires='>3.8.0',
+    python_requires='<=3.9',
     install_requires=[
     "tensorflow==2.6.0",
     "keras==2.6.0",
