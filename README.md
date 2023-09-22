@@ -1,13 +1,13 @@
 # CycPred
 Tensorflow model for the prediction of cyclizability of provided DNA sequences of length 50
 
-## Usage:
+# Usage:
 
 ```
 python CycPred.py inputfile outputfile
 ```
 
-+ Inputfile must be DNA sequences consisting of only A,T,G or C of length 50, seperated by newline
++ Inputfile must be DNA sequences consisting of only A,T,G or C of length 50 or more, seperated by newline; If fasta file is given, the --fasta flag has to be added
 
 + Outputfile is a text file with newline seperated predicted cyclizability values for each sequence
 
@@ -15,10 +15,11 @@ optional arguments
 
 + --numpy : stores result in npy binary file instead of textfile
 + -n --threads : give number of threads. Default is all available threads
++ --fasta : input file is treated as a fasta file
 
 When execucted, the program performs cyclizability prediction on both the sequence and its reverse complement and reports the average value.
 
-## Installation guide:
+# Installation guide:
 
 
 required packages:
@@ -26,6 +27,7 @@ required packages:
 + Tensorflow version 2.6.0
 + scikit-learn
 
+## Installation with conda :
 
 0. ``` git clone https://github.com/georgback/CycPred ```
 1. install conda (miniconda is advised)
@@ -52,6 +54,37 @@ Example execution
 ```
 python CycPred.py Yeast_chromosome_V.csv result.txt
 ```
+
+## Installation as a package with pip
+
+Guide to install cycpred as a package. We advise to do so in a virtual environment due to dependencies on specific tensorflow version.
+
+0. ``` git clone https://github.com/georgback/CycPred ```
+1. Create new virtual environment 
+ 
+      +  ```
+         python -m venv env
+         source env/bin/activate cycpred
+         ```
+2. Install package
+   +  ``` pip install -e . ```
+  
+
+To test if installed into the correct bin/ you can try
+   + ``` cycpred --help ```
+
+Example execution
+```
+cycpred Yeast_chromosome_V.csv result.txt
+```
+
+
+The environment can be deacitvated with :
+```deactivate```
+and reactivated (in the correct directory) with:
+```source env/bin/activate cycpred```
+
+
 
 There is also a [colab notebook](https://colab.research.google.com/drive/1ng2dKkaZobSYHPWGgZKz4SFIS1peZfWh?usp=sharing) available.
 
