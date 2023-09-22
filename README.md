@@ -9,7 +9,7 @@ python CycPred.py inputfile outputfile
 
 + Inputfile must be DNA sequences consisting of only A,T,G or C of length 50 or more, seperated by newline; If fasta file is given, the --fasta flag has to be added
 
-+ Outputfile is a text file with newline seperated predicted cyclizability values for each sequence
++ Outputfile is a text file with newline seperated predicted cyclizability values for each sequence. For each sequence longer than 50bp, tab seperated values for all 50bp windows in 1bp increments is returned instead.
 
 optional arguments
 
@@ -107,7 +107,5 @@ There is also a [colab notebook](https://colab.research.google.com/drive/1ng2dKk
 
 ## Architecture of the model:
 
-
-![Architecture_more_info](https://user-images.githubusercontent.com/75431641/233105485-0bdf9e56-67f5-45ff-8b1b-612fe36d1cea.png)
 ![Architecture_more_info](https://github.com/georgback/CycPred/assets/75431641/4967e858-cbf2-472a-9489-683d966a72d7)
 
